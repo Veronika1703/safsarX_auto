@@ -352,3 +352,103 @@ def test_search_field(driver):
 #         time.sleep(2)
 #         assert header in description_text
 #         assert expected_description in description_text
+
+#sapir- בדיקה של הכותרת בתחתית העמוד
+def test_6_3_2(driver):
+        base_url = 'https://portal-dev.safsarglobal.link/'
+        lp = Lp(driver)
+        driver.get(base_url)
+        element = WebDriverWait(driver, 15).until(EC.element_to_be_clickable(lp.BIG_TITL))
+        assert element.is_displayed(), "button is not displayed."
+
+#sapir- בדיקה שכותרות מי אנחנו, איך זה עובד, שאלות ותשובות, מכירת כרטיסים, צרו קשר תנאי שימוש, מדיניות פרטיות, מדיניות ביטולים והצהרת נגישות לחיצים
+def test_6_3_2(driver):
+        base_url = 'https://portal-dev.safsarglobal.link/'
+        lp = Lp(driver)
+        driver.get(base_url)
+        lp.click_how_it_works()
+        time.sleep(5)
+        assert base_url == 'https://portal-dev.safsarglobal.link/who-we-are'
+
+def test_6_3_2(driver):
+        base_url = 'https://portal-dev.safsarglobal.link/'
+        lp = Lp(driver)
+        driver.get(base_url)
+        lp.click_how_it_works()
+        time.sleep(5)
+        assert base_url == 'https://portal-dev.safsarglobal.link/how-it-works'
+
+def test_6_3_2(driver):
+        base_url = 'https://portal-dev.safsarglobal.link/'
+        lp = Lp(driver)
+        driver.get(base_url)
+        lp.click_questions_answers()
+        time.sleep(5)
+        assert base_url == 'https://portal-dev.safsarglobal.link/faqs'
+
+def test_6_3_2(driver):
+        base_url = 'https://portal-dev.safsarglobal.link/'
+        lp = Lp(driver)
+        driver.get(base_url)
+        lp.click_ticket_sales()
+        time.sleep(5)
+        assert base_url == 'https://portal-dev.safsarglobal.link/ticket-sales'
+
+def test_6_3_2(driver):
+        base_url = 'https://portal-dev.safsarglobal.link/'
+        lp = Lp(driver)
+        driver.get(base_url)
+        lp.click_contact_us()
+        time.sleep(5)
+        assert base_url == 'https://portal-dev.safsarglobal.link/contact-us'
+
+def test_6_3_4(driver):
+        base_url = 'https://portal-dev.safsarglobal.link/'
+        lp = Lp(driver)
+        driver.get(base_url)
+        lp.click_terms()
+        time.sleep(5)
+        assert base_url == 'https://portal-dev.safsarglobal.link/terms-and-conditions'
+
+def test_6_3_2(driver):
+        base_url = 'https://portal-dev.safsarglobal.link/'
+        lp = Lp(driver)
+        driver.get(base_url)
+        lp.click_privacy_policy()
+        time.sleep(5)
+        assert base_url == 'https://portal-dev.safsarglobal.link/privacy-policy'
+
+def test_6_3_2(driver):
+        base_url = 'https://portal-dev.safsarglobal.link/'
+        lp = Lp(driver)
+        driver.get(base_url)
+        lp.click_accssibility()
+        time.sleep(5)
+        assert base_url == 'https://portal-dev.safsarglobal.link/accessibility-statement'
+
+def test_6_3_2(driver):
+        base_url = 'https://portal-dev.safsarglobal.link/'
+        lp = Lp(driver)
+        driver.get(base_url)
+        lp.click_cancel_lation()
+        time.sleep(5)
+        assert base_url == 'https://portal-dev.safsarglobal.link/cancellation-policy'
+
+# sapir- מעבר לדף האינטרנט של פייסבוק
+def test_6_3_7(driver):
+        base_url = 'https://portal-dev.safsarglobal.link/'
+        lp = Lp(driver)
+        driver.get(base_url)
+        lp.click_facebook()
+        time.sleep(5)
+        assert base_url == 'https://www.facebook.com/profile.php?id=61558194638860'
+
+# sapir- מעבר לדף האינסטגרם של ספסר
+def test_6_3_7(driver):
+        base_url = 'https://portal-dev.safsarglobal.link/'
+        lp = Lp(driver)
+        driver.get(base_url)
+        lp.click_instagram()
+        time.sleep(5)
+        assert base_url == 'https://www.instagram.com/'
+
